@@ -1,0 +1,14 @@
+# Ignore build artifacts
+build/
+*.o
+*.user
+*.pro.user
+*.autosave
+*.log
+
+# Qt-specific files
+moc_*
+*.qrc
+*.qmlc
+*.qtmp
+
