@@ -137,7 +137,7 @@ void DirectoryWatcher::passZipToLoader(const QString& filePath) {
     process.setWorkingDirectory(workingDir);
 
     // ✅ Correctly pass the executable and arguments
-    process.start("sudo", {"-u", serviceUser, loaderPath, filePath});
+    process.start("sudo", {"-u", serviceUser, loaderPath, "-SupressOutput", filePath});
 
     if (!process.waitForStarted()) {
         qWarning() << "❌ Failed to start QT_LIBRARY_LOADER for:" << filePath;
